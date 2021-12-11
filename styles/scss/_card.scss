@@ -1,0 +1,80 @@
+@use 'index' as *;
+
+.title 
+{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+    color: $h1-color;
+    text-transform: uppercase;
+    margin: 3rem;
+}
+
+.card
+{
+    flex-basis: 375px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: $white;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .35rem rgba($color: #000000, $alpha: .15);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    color: $dark-gray;
+    transition-delay: .25s;
+
+    &__number{
+        font-size: 3rem;
+        font-weight: bold;
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+        color: $white;
+        z-index: 2;
+    }
+
+    &::before
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $number-bg-color;
+        clip-path: circle(27.7% at 0 0);
+        transition: clip-path .5s ease-in;
+        z-index: -1;
+
+    }
+
+    &:hover::before
+    {
+        clip-path: circle(141.4% at 0 0);
+    }
+
+    &__icon
+    {
+        font-size: 2.5rem;
+        background: $gray;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        line-height: 5rem !important;
+        margin: .5rem;
+        transition-delay: .25s;
+    }
+
+    &:hover
+    {
+        color: #fff;
+    }
+
+    &:hover &__icon
+    {
+        background: green;
+    }
+}

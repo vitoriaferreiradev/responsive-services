@@ -1,0 +1,25 @@
+@use 'index' as *;
+
+.theme
+{
+    position: fixed;
+    z-index: 999;
+    font-size: 2.3rem;
+    top: 1.5rem;
+    right: 1rem;
+    color: $h1-color;
+    background: $white;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem 1.5rem rgba($color: #333, $alpha: .3);
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:hover
+    {
+        background: $number-bg-color;
+        color: $white;
+    }
+}
